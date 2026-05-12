@@ -301,12 +301,13 @@ def main():
         default=8006,
         help="WebSocket server port"
     )
+    parser.add_argument('--norm_path',   type=str, default=None, help='norm file path of training data')
     parser.add_argument("--num_denoising_step", type=int, default=10, help="num of denoising step")
     parser.add_argument("--use_compile", action='store_true', help="use torch compile or not")
 
     args = parser.parse_args()
 
-    model = LingbotVLAServer(args.model_path, use_length=args.use_length, num_denoising_step=args.num_denoising_step, use_compile=args.use_compile)
+    model = LingbotVLAServer(args.model_path, use_length=args.use_length, robot_norm_path=args.norm_path, num_denoising_step=args.num_denoising_step, use_compile=args.use_compile)
     model_server = WebsocketPolicyServer(model, port=args.port)
     model_server.serve_forever()
 

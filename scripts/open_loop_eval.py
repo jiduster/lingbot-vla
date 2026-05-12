@@ -214,7 +214,7 @@ if __name__ == "__main__":
     parser.add_argument('--model_path',  type=str, required=True)
 
     parser.add_argument('--robo_name',   type=str, default=None, help='robot type')
-    parser.add_argument('--norm_path',   type=str, default=None, help='norm file path of training/validation data')
+    parser.add_argument('--norm_path',   type=str, default=None, help='norm file path of training data')
     parser.add_argument('--data_path',   type=str, default=None, help='path of validation data')
     
     parser.add_argument('--traj_ids',    type=int, nargs='+', default=[0])
