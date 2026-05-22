@@ -1,0 +1,19 @@
+{
+  "type": "pi0",
+  "n_obs_steps": 1,
+  "input_features": {},
+  "output_features": {},
+  "device": "cpu",
+  "use_amp": false,
+  "chunk_size": 50,
+  "n_action_steps": 50,
+  "max_state_dim": 75,
+  "max_action_dim": 75,
+  "empty_cameras": 0,
+  "tokenizer_max_length": 72,
+  "num_inference_steps": 10,
+  "image_resolution": [
+    224,
+    224
+  ]
+}
