@@ -4,8 +4,7 @@ import numpy as np
 import torch
 from torch import nn
 import torch.nn.functional as F
-from lerobot.policies.pi0.configuration_pi0 import PI0Config
-from lerobot.policies.pretrained import PreTrainedPolicy
+from lingbotvla.lerobot_compat import PI0Config, PreTrainedPolicy
 from torch import Tensor, nn
 from typing import List, Optional, Tuple, Union
 from transformers import (

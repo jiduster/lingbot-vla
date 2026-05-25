@@ -25,7 +25,7 @@ import datasets
 from collections.abc import Callable
 from pathlib import Path
 
-from lerobot.policies.pi0.configuration_pi0 import PI0Config
+from lingbotvla.lerobot_compat import PI0Config
 from lerobot.datasets.lerobot_dataset import LeRobotDataset as BaseLeRobotDataset
 from lerobot.datasets.lerobot_dataset import LeRobotDatasetMetadata
 

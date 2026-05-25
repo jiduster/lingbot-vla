@@ -18,9 +18,16 @@
 from abc import ABC
 
 import torch
-from transformers import AutoModel, AutoModelForCausalLM, AutoModelForVision2Seq, PreTrainedModel
-from transformers.modeling_utils import no_init_weights
-from lerobot.policies.pi0.configuration_pi0 import PI0Config
+from transformers import AutoModel, AutoModelForCausalLM, PreTrainedModel
+try:
+    from transformers import AutoModelForVision2Seq
+except ImportError:
+    from transformers import AutoModelForImageTextToText as AutoModelForVision2Seq
+try:
+    from transformers.modeling_utils import no_init_weights
+except ImportError:
+    from transformers.initialization import no_init_weights
+from lingbotvla.lerobot_compat import PI0Config
 
 from ..utils import logging
 from ..utils.import_utils import is_torch_npu_available, is_vescale_available
